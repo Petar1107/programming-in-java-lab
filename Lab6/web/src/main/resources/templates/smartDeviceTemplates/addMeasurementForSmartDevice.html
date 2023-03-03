@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>add measurement for smart device</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h2>Add measurement</h2><br>
+    <form th:action="@{/saveDeviceMeasurement}" method="POST">
+        <h5>Measurement for smart device:  <span th:text="${smartDevice.title}"></span></h5>
+        <input type="hidden" th:field="*{measurement.smartDeviceId}">
+        <input type="text" th:field="*{measurement.value}" placeholder="measured value"  class="form-control mb-4 col-4">
+        <button type="submit" class="btn btn-info col-2">add measurement</button>
+    </form>
+    <hr>
+
+    <a th:href="@{/smartDevice}"> Back to devices measurement list</a>
+</div>
+</body>
+</html>

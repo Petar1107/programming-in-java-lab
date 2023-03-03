@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>smartDevice</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-2" align="center">
+
+    <h3>Smart device with id: <span th:text = "${smartDevice.id}"></span></h3>
+    <table style="width:80%" border="1"
+           class = "table table-striped table-responsive-md">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Measurements</th>
+            <th>Add</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td th:text="${smartDevice.title}"></td>
+            <td th:each="measurement: ${history}">
+                History id: <span th:text="${measurement.id}" /> <br>
+                Measured value: <span th:text="${measurement.measuredValue}" /><br>
+                Year: <span th:text="${measurement.yearMeasured}" />
+                Month: <span th:text="${measurement.monthMeasured}" /><br>
+            </td>
+            </td>
+            <td>
+                <a href="addMeasurementForSmartDevice.html.html" th:href="@{/smartDevice/{smartDeviceId}/addMeasurement(smartDeviceId=${smartDevice.id})}">Add measurement</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

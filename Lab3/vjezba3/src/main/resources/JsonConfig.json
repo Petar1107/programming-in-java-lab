@@ -1,0 +1,89 @@
+{
+  "publisher" : {
+    "broker" : "tcp://localhost:1883",
+    "clientId" : "Petar"
+  },
+  "sensors": {
+    "A": {
+      "sensorPurpose": "Senzor za temperaturu vode",
+      "dataType": "int",
+      "factor": 10,
+      "lowerValueLimit": -3266.8,
+      "upperValueLimit": 3266.8,
+      "measuringUnit": "celzijev stupanj",
+      "value": 0.0
+    },
+    "B": {
+      "sensorPurpose": "Senzor tlaka vode",
+      "dataType": "uint16",
+      "factor": 1000,
+      "lowerValueLimit": 0.0,
+      "upperValueLimit": 65.336,
+      "measuringUnit": "Bar",
+      "value": 0.0
+    },
+    "C": {
+      "sensorPurpose": "Potrosnja u zadnjoj minuti",
+      "dataType": "uint16",
+      "factor": 0,
+      "lowerValueLimit": 0.0,
+      "upperValueLimit": 65336.0,
+      "measuringUnit": "litra",
+      "value": 0.0
+    },
+    "D": {
+      "sensorPurpose": "Potrosnja u zadnjih 10 minuta",
+      "dataType": "uint16",
+      "factor": 0,
+      "lowerValueLimit": 0.0,
+      "upperValueLimit": 65336.0,
+      "measuringUnit": "litra",
+      "value": 0.0
+    },
+    "E": {
+      "sensorPurpose": "Potrosnja u zadnjem satu",
+      "dataType": "uint16",
+      "factor": 0,
+      "lowerValueLimit": 0.0,
+      "upperValueLimit": 65336.0,
+      "measuringUnit": "litra",
+      "value": 0.0
+    },
+    "F": {
+      "sensorPurpose": "Potrosnja u zadnjih 1 dan",
+      "dataType": "uint16",
+      "factor": 0,
+      "lowerValueLimit": 0.0,
+      "upperValueLimit": 65336.0,
+      "measuringUnit": "Litra",
+      "value": 0.0
+    },
+    "G": {
+      "sensorPurpose": "Potrosnja u zadnjem tjednu",
+      "dataType": "uint16",
+      "factor": 10,
+      "lowerValueLimit": 0.0,
+      "upperValueLimit": 6533.6,
+      "measuringUnit": "m3",
+      "value": 0.0
+    },
+    "H": {
+      "sensorPurpose": "Potrosnja u zadnjem mjescu",
+      "dataType": "uint16",
+      "factor": 10,
+      "lowerValueLimit": 0.0,
+      "upperValueLimit": 6533.6,
+      "measuringUnit": "m3",
+      "value": 0.0
+    },
+    "I": {
+      "sensorPurpose": "Potrosnja u zadnjoj godini",
+      "dataType": "uint16",
+      "factor": 10,
+      "lowerValueLimit": 0.0,
+      "upperValueLimit": 6533.6,
+      "measuringUnit": "m3",
+      "value": 0.0
+    }
+  }
+}
